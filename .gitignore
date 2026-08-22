@@ -1,0 +1,11 @@
+# .NET Ignored Files
+[Bb]in/
+[Oo]bj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+*.db
+*.sqlite
+*.sqlite-journal

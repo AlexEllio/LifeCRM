@@ -1,0 +1,6 @@
+@LifeCRM.Api_HostAddress = http://localhost:5245
+
+GET {{LifeCRM.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

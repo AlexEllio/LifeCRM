@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Project Path="LifeCRM.Api/LifeCRM.Api.csproj" Id="7a85c70b-f17c-4fcd-91d7-40a14c092d10" />
+  <Project Path="src/LifeCRM.Shared/LifeCRM.Shared.csproj" Id="5068678e-9428-44bd-803f-ddf36f316493" />
+</Solution>
