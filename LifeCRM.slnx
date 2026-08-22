@@ -3,7 +3,6 @@
     <File Path=".gitignore" />
     <File Path="docker-compose.yml" />
   </Folder>
-  <Folder Name="/src/" />
   <Project Path="src/LifeCRM.Api/LifeCRM.Api.csproj" Id="4abe80bb-60ca-4ad1-b274-d0e0a1339d7c" />
   <Project Path="src/LifeCRM.Client/LifeCRM.Client.csproj" Id="3810c61e-510d-44d3-bec6-ba1c2e4ebb9e" />
   <Project Path="src/LifeCRM.Shared/LifeCRM.Shared.csproj" Id="5068678e-9428-44bd-803f-ddf36f316493" />
