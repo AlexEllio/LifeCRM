@@ -1,5 +1,9 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="docker-compose.yml" />
+  </Folder>
   <Folder Name="/src/" />
-  <Project Path="LifeCRM.Api/LifeCRM.Api.csproj" Id="7a85c70b-f17c-4fcd-91d7-40a14c092d10" />
+  <Project Path="src/LifeCRM.Api/LifeCRM.Api.csproj" Id="4abe80bb-60ca-4ad1-b274-d0e0a1339d7c" />
   <Project Path="src/LifeCRM.Shared/LifeCRM.Shared.csproj" Id="5068678e-9428-44bd-803f-ddf36f316493" />
 </Solution>
