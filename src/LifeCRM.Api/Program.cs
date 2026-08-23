@@ -1,23 +1,33 @@
+using Microsoft.EntityFrameworkCore;
+using LifeCRM.Api.Data;
+using LifeCRM.Api.Endpoints;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Register SQLite EF Core Context
+builder.Services.AddDbContext<LifeCrmDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") ?? "Data Source=lifecrm_master.db"));
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.MapUtilityEndpoints();
 
-app.MapControllers();
+// Automatic Database Migration on Startup (Handy for self-hosted Docker containers)
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<LifeCrmDbContext>();
+    db.Database.EnsureCreated();
+}
 
 app.Run();
